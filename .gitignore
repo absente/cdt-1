@@ -9,6 +9,7 @@ ebin
 rel/example_project
 .concrete/DEV_MODE
 .rebar
+*.pyc
 __pycache__
 __pycache__/*
 mysql.cnf

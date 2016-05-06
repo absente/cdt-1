@@ -57,7 +57,9 @@ ROOT_URLCONF = 'cdt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,11 +123,26 @@ USE_L10N = True
 USE_TZ = False
 
 # 模板所在地
-TEMPLATE_DIRS = [{
+DEFUALT_TEMPLATE_DIRS = [{
     'base': os.path.join(BASE_DIR, 'templates'),
     'cdtAction': os.path.join(BASE_DIR, 'cdtAction/templates'),
 }]
 
+
+# ================邮件配置=============
+# ADMINS = (
+#     ('cdt', 'myisjon@hotmail.com'),
+#     ('testcdt', 'denghaihui495@sina.com'),
+# )
+
+# SERVER_EMAIL = 'denghaihui495@sina.com'
+# EMAIL_USE_SSL = True
+# EMAIL_HOST = 'smtp.sina.com'
+# EMAIL_PORT = 465
+# EMAIL_HOST_USER = 'denghaihui495@sina.com'
+# EMAIL_HOST_PASSWORD = 'XXXXXXX'
+
+# DEFAULT_FROM_EMAIL = SERVER_EMAIL
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 

@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from cdtAction.models import User
+from cdtAction.models import Account
 
 
 class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
-        models = User
+        models = Account
         depth = 0
