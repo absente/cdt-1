@@ -78,15 +78,21 @@ WSGI_APPLICATION = 'cdt.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES_PATH = BASE_DIR + '/cdt/mysql.cnf'
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': DATABASES_PATH,
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
+# DATABASES_PATH = BASE_DIR + '/cdt/mysql.cnf'
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'OPTIONS': {
+#             'read_default_file': DATABASES_PATH,
+#         },
+#     }
+# }
 
 
 # Password validation
